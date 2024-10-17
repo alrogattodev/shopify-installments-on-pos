@@ -1,11 +1,11 @@
 import React, {useState, useEffect, ReactNode} from 'react';
-
-//import { CartDiscountType } from '@shopify/ui-extensions/point-of-sale'
-import { Text, Navigator, RadioButtonList, Screen, ScrollView, Button, Stack, useApi, reactExtension } from '@shopify/ui-extensions-react/point-of-sale';
+import { reactExtension, Text, Navigator, RadioButtonList, Screen, ScrollView, Button, Stack, useApi } from '@shopify/ui-extensions-react/point-of-sale';
 
 const SmartGridModal = () => {
   const api = useApi();
-  //const [subtotal, setSubtotal] = useState(0);
+  const [selected, setSelected] =
+    React.useState('');
+
   const subtotal = api.cart.subscribable.initial.subtotal;
   useEffect(() => {
     const fetchCartSubtotal = async () => {
@@ -37,14 +37,19 @@ const SmartGridModal = () => {
     api.toast.show('Discount applied');
   }
 
+  const parcelasOptions = Array.from({ length: 18 }, (_, count) => 
+    `${count + 1}x de R$${(subtotal / (count + 1)).toFixed(2)}`
+  );
+
   return (
     <Navigator>
       <Screen name='Discounts' title='Available Discounts'>
-        <ScrollView>
-          {Array.from(Array(18)).map((_, count) =>
-          textElement((count+1) + ": " + "R$"+(subtotal / (count+1)).toFixed(2) + " em " + (count+1) + "x"),
-          )}
-        </ScrollView>
+        <RadioButtonList
+          items={parcelasOptions}
+          onItemSelected={setSelected}
+          initialSelectedItem={selected}
+        />
+        <Text>{`Você selecionou: ${selected}`}</Text>
         <Text>{`Valor total: R$${(subtotal / 1).toFixed(2)}`}</Text>
       </Screen>
     </Navigator>
