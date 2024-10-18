@@ -4,10 +4,10 @@ api_version = "2024-10"
 
 [[extensions]]
 type = "ui_extension"
-name = "installments-pos"
+name = "Parcelamento POS"
 
-handle = "installments-pos"
-description = "A react POS UI extension"
+handle = "Parcelamento POS"
+description = "Este app é uma extensão do Shopify para lojas brasileiras que processam pagamentos externamente, como em máquinas de cartão. Ele permite que os lojistas registrem a quantidade de parcelas escolhidas pelo cliente e armazenem essa informação no checkout, facilitando o gerenciamento financeiro e integrando de forma eficiente com sistemas ERP."
 
 # Controls where in POS your extension will be injected,
 # and the file that contains your extension’s source code.
