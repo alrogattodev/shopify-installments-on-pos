@@ -3,7 +3,7 @@
 client_id = "fc4e72d19af8c8158ef9fa64e9d848cd"
 name = "installments-on-checkout"
 handle = "installments-on-checkout-1"
-application_url = "https://costume-calendar-kathy-antibody.trycloudflare.com"
+application_url = "https://medicine-of-omaha-sharon.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://costume-calendar-kathy-antibody.trycloudflare.com/auth/callback",
-  "https://costume-calendar-kathy-antibody.trycloudflare.com/auth/shopify/callback",
-  "https://costume-calendar-kathy-antibody.trycloudflare.com/api/auth/callback"
+  "https://medicine-of-omaha-sharon.trycloudflare.com/auth/callback",
+  "https://medicine-of-omaha-sharon.trycloudflare.com/auth/shopify/callback",
+  "https://medicine-of-omaha-sharon.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

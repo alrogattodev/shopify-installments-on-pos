@@ -6,7 +6,7 @@ const SmartGridTile = () => {
   const api = useApi();
 
   const shouldEnable = (subtotal) => {
-    return Number(subtotal) > 100
+    return Number(subtotal) > 10
   }
 
   // You can use the initial cart value to set up state

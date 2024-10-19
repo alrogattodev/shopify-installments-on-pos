@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ReactNode} from 'react';
+import React, {useState, useEffect} from 'react';
 import { reactExtension, Text, Navigator, RadioButtonList, Screen, ScrollView, Button, useApi } from '@shopify/ui-extensions-react/point-of-sale';
 console.error("WELCOME");
 const SmartGridModal = () => {
@@ -21,14 +21,14 @@ const SmartGridModal = () => {
 
   const aplicarParcelas = async () => {
     if (!selected) {
-      await api.cart.updateNote('Teste de nota fixa');      
       api.toast.show('Por favor, selecione o número de parcelas.');
       return;
     }
 
     // add description
     try { 
-      await api.cart.addCartProperties({Engraving: `Forma de Pagamento: ${selected}`})
+      await api.cart.addCartProperties({Engraving: `Forma de Pagamento: ${selected}`});
+      api.toast.show('Parcelamento aplicado');
     } catch (error) {
       console.error('Erro ao aplicar parcelas:', error);
     }
