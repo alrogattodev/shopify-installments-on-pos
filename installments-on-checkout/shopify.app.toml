@@ -1,9 +1,9 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "fc4e72d19af8c8158ef9fa64e9d848cd"
-name = "installments-on-checkout"
+name = "Parcelamento POS"
 handle = "installments-on-checkout-1"
-application_url = "https://medicine-of-omaha-sharon.trycloudflare.com"
+application_url = "https://cedar-ton-lasting-jim.trycloudflare.com"
 embedded = true
 
 [build]
@@ -16,9 +16,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://medicine-of-omaha-sharon.trycloudflare.com/auth/callback",
-  "https://medicine-of-omaha-sharon.trycloudflare.com/auth/shopify/callback",
-  "https://medicine-of-omaha-sharon.trycloudflare.com/api/auth/callback"
+  "https://cedar-ton-lasting-jim.trycloudflare.com/auth/callback",
+  "https://cedar-ton-lasting-jim.trycloudflare.com/auth/shopify/callback",
+  "https://cedar-ton-lasting-jim.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

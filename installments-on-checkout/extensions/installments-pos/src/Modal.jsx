@@ -43,6 +43,7 @@ const SmartGridModal = () => {
             items={parcelasOptions}
             onItemSelected={setSelected}
             initialSelectedItem={selected}
+            style={{ marginBottom: '15px' }}
           />
           <Text>{`Você selecionou: ${selected}`}</Text>
           <Text>{`Valor total: R$${(subtotal / 1).toFixed(2)}`}</Text>
